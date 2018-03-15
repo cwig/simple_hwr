@@ -1,0 +1,12 @@
+{
+    "training_set_path": "prepare_IAM_Lines/raw_gts/lines/txt/training.json",
+    "validation_set_path": "prepare_IAM_Lines/raw_gts/lines/txt/test.json",
+    "image_root_directory": "prepare_IAM_Lines/lines",
+    "model_save_path": "model.pt",
+    "network": {
+        "input_height": 60,
+        "cnn_out_size": 1024,
+        "learning_rate": 1e-4
+    },
+    "character_set_path": "prepare_IAM_Lines/char_set.json"
+}
