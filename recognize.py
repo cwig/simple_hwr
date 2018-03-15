@@ -42,8 +42,8 @@ def main():
     hw.eval()
 
     img = cv2.imread(image_path)
-    if img.shape[0] != config['network']['img_height']:
-        percent = float(config['network']['img_height']) / img.shape[0]
+    if img.shape[0] != config['network']['input_height']:
+        percent = float(config['network']['input_height']) / img.shape[0]
         img = cv2.resize(img, (0,0), fx=percent, fy=percent, interpolation = cv2.INTER_CUBIC)
 
 
