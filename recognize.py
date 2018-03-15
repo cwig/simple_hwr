@@ -31,7 +31,6 @@ def main():
     })
 
     hw.load_state_dict(torch.load(config['model_save_path']))
-
     if torch.cuda.is_available():
         hw.cuda()
         dtype = torch.cuda.FloatTensor
@@ -39,6 +38,8 @@ def main():
     else:
         dtype = torch.FloatTensor
         print("No GPU detected")
+
+    hw.eval()
 
     img = cv2.imread(image_path)
     if img.shape[0] != config['network']['img_height']:

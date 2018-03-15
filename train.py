@@ -49,6 +49,7 @@ def main():
     for epoch in range(1000):
         sum_loss = 0.0
         steps = 0.0
+        hw.train()
         for i, x in enumerate(train_dataloader):
             line_imgs = Variable(x['line_imgs'].type(dtype), requires_grad=False)
             labels =  Variable(x['labels'], requires_grad=False)
@@ -84,6 +85,7 @@ def main():
 
         sum_loss = 0.0
         steps = 0.0
+        hw.eval()
         for x in test_dataloader:
             line_imgs = Variable(x['line_imgs'].type(dtype), requires_grad=False, volatile=True)
             labels =  Variable(x['labels'], requires_grad=False, volatile=True)
