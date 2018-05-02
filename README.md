@@ -20,7 +20,7 @@ git clone https://github.com/cwig/prepare_font_data
 cd prepare_font_data  
 bash run.sh  
 cd ..  
-python character_set.py prepare_font_data/output/training.json prepare_font_data/char_set.json
+python character_set.py prepare_font_data/training.json prepare_font_data/char_set.json
 
 #### Prepare IAM Data
 
